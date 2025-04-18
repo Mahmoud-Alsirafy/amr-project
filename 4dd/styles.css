@@ -1,0 +1,481 @@
+/* === Unified Stylesheet for Engineering Education Website === */
+
+:root {
+    --primary-color: #007bff;    /* Standard Blue */
+    --primary-dark: #0056b3;   /* Darker Blue */
+    --secondary-color: #6c757d; /* Gray */
+    --light-gray: #f8f9fa;    /* Light Background Gray */
+    --white: #ffffff;
+    --dark-text: #212529;     /* Dark Gray Text */
+    --medium-text: #495057;    /* Medium Gray Text */
+    --light-text: #6c757d;    /* Light Gray Text */
+    --border-color: #dee2e6;   /* Standard Border */
+    --success-color: #28a745;   /* Green */
+    --error-color: #dc3545;     /* Red */
+    --link-color: var(--primary-dark);
+    --font-family-base: 'Roboto', 'Segoe UI', 'Cairo', sans-serif; /* Added Roboto, fallback */
+    --border-radius: 0.25rem; /* Standard small radius */
+    --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Subtle shadow */
+    --box-shadow-lg: 0 1rem 3rem rgba(0,0,0,.175); /* Larger shadow for modals etc. */
+}
+
+/* --- Global Styles --- */
+body {
+    margin: 0;
+    font-family: var(--font-family-base);
+    background-color: #2e59d9;
+    color: var(--dark-text);
+    direction: rtl;
+    line-height: 1.6;
+    font-size: 16px; /* Base font size */
+}
+
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* --- Header & Navigation --- */
+header.main-header { /* Added a class for easier targeting */
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky; /* Sticky header */
+    width: 100%;
+    top: 0;
+    z-index: 1030; /* Ensure it's above content */
+    box-sizing: border-box;
+}
+
+nav.main-nav { /* Added a class */
+    display: flex;
+    justify-content: space-between; /* Align logo/title and links */
+    align-items: center;
+    max-width: 1140px; /* Standard container width */
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+/* Optional: Site Title/Logo Area */
+.site-title {
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0;
+}
+
+.nav-links { /* Container for links/buttons */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links a,
+.nav-links .dropdown-btn {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem 0.1rem; /* Minimal horizontal margin */
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s ease;
+    font-size: 0.95rem;
+    font-weight: 500; /* Medium weight */
+    cursor: pointer;
+    background: transparent;
+    border: none; /* Ensure dropdown btn is borderless */
+    font-family: inherit; /* Ensure buttons inherit font */
+}
+
+.nav-links a:hover,
+.nav-links .dropdown-btn:hover,
+.nav-links .dropdown:hover .dropdown-btn {
+    background-color: rgba(255, 255, 255, 0.15); /* Subtle hover */
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 200px;
+    box-shadow: var(--box-shadow-lg); /* Use larger shadow */
+    border-radius: var(--border-radius);
+    z-index: 1031; /* Above header */
+    margin-top: 0.25rem;
+    border: 1px solid var(--border-color);
+    right: 0; /* Align to right */
+    overflow: hidden;
+    padding: 0.5rem 0; /* Padding for items */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.dropdown-content a {
+    color: var(--dark-text);
+    padding: 0.5rem 1.25rem; /* Consistent padding */
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    font-size: 0.9rem;
+    border: none; /* Remove bottom border */
+}
+
+.dropdown-content a:hover {
+    background-color: var(--light-gray);
+    color: var(--primary-dark);
+}
+
+/* --- Main Content Area --- */
+main {
+    padding: 2rem 1rem; /* Consistent padding */
+    max-width: 1140px; /* Match nav container */
+    margin: 1rem auto 0; /* Space below sticky header */
+}
+
+/* Unified Content Box Style */
+.content-box {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 1.5rem; /* Standard padding */
+    margin-bottom: 1.5rem;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+    animation: slideUpFadeIn 0.5s ease-out;
+    text-align: center !important;
+    text-align: center;
+     border-left: none;
+      padding-bottom: 1rem; 
+      margin-bottom: 2rem;
+}
+
+
+#main{
+    text-align: center !important;
+    background-color: #343a40;
+    color: #fff !important;
+}
+
+.content-box h1, .content-box h2, .content-box h3 {
+    color: var(--primary-dark);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.content-box h1 { font-size: 2rem; margin-bottom: 1.5rem; }
+.content-box h2 { font-size: 1.75rem; color: #fff; }
+.content-box h3 { font-size: 1.25rem;color: #fff;  }
+.content-box p { margin-bottom: 1rem; color: #fff; }
+.content-box p:last-child { margin-bottom: 0; }
+.content-box ul { padding-right: 20px; margin-bottom: 1rem; }
+.content-box li { margin-bottom: 0.5rem; }
+
+
+
+/* Adjusting objective/skill/question appearance slightly */
+.objective-item, .objective, .question {
+   padding: 1.25rem;
+   border-left: 4px solid var(--primary-color); /* Add an accent border */
+}
+.objective-item h3, .objective h3, .question h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Card specific styles (main.html) */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #343a40; 
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+}
+.card p { flex-grow: 1;} /* Ensure paragraph takes space */
+
+.card a.btn-card { /* Specific button style for cards */
+    margin-top: auto; /* Push button to bottom */
+    align-self: flex-start;
+    text-decoration: none !important;
+}
+
+/* --- Forms & Buttons --- */
+/* General Button Style */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: var(--white);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem 1rem; /* Standard padding */
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: var(--border-radius);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    text-decoration: none; /* Remove underline from links styled as buttons */
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.btn-danger {
+    background-color: var(--error-color);
+    border-color: var(--error-color);
+}
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-success {
+     background-color: var(--success-color);
+     border-color: var(--success-color);
+}
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-lg { /* Larger button */
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+.btn-block { /* Full width button */
+    display: block;
+    width: 100%;
+}
+
+/* Logout Button in Nav */
+.logout-btn {
+    background-color: var(--error-color);
+    border: none;
+    color: white;
+     /* Inherits padding/font from .nav-links a */
+}
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--medium-text);
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--dark-text);
+    background-color: var(--white);
+    background-clip: padding-box;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.form-control:focus {
+    color: var(--dark-text);
+    background-color: var(--white);
+    border-color: #80bdff; /* Light blue focus */
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus glow */
+}
+
+/* Radio Buttons / Options */
+.options label {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.options label:hover {
+    background-color: var(--light-gray);
+    border-color: #b8daff;
+}
+.options input[type="radio"] {
+    margin-left: 0.5rem; /* RTL: margin-left */
+    vertical-align: middle;
+    accent-color: var(--primary-color); /* Modern browser styling */
+}
+.options input[type="radio"]:checked + span,
+.options input[type="radio"]:checked + label /* Adjust if span isn't used */
+{
+    font-weight: 700; /* Indicate selection */
+}
+.options input[type="radio"]:checked + label {
+     border-color: var(--primary-color);
+     background-color: #e7f3ff; /* Light blue selected */
+}
+
+/* --- Specific Page Styles --- */
+
+/* Login Page */
+.login-container { /* Specific container for login */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height */
+    padding: 1rem;
+}
+.login-box { /* Inherits .content-box */
+    max-width: 400px;
+    width: 100%;
+}
+.login-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.login-header h1 { color: var(--primary-color); }
+.login-header p { color: var(--light-text); }
+
+/* Exam Result */
+#result {
+    display: none; /* Hidden by default */
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid transparent;
+}
+#result h2 { margin-bottom: 0.5rem; }
+#result p { margin-bottom: 1rem; }
+#result button { margin-top: 0.5rem; } /* Spacing for buttons in result */
+
+.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.success h2 { color: #155724; }
+
+.failure {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.failure h2 { color: #721c24; }
+
+/* Error Message Style (Login, Forms) */
+.error-msg {
+    color: var(--error-color);
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: none; /* Hidden by default */
+}
+
+/* Lesson Navigation (Show/Hide sections) */
+#lessonContent, #postTest {
+    display: none; /* Hide initially */
+}
+.lesson-section .btn { /* Ensure lesson buttons have margin */
+    margin-top: 1rem;
+    margin-right: 0.5rem; /* Space between buttons if needed */
+}
+.lesson-section form { /* Add space below forms */
+    margin-bottom: 1rem;
+}
+
+#sbu{
+    text-align:center;
+     margin-top: 2rem;
+}
+
+/* --- Footer --- */
+footer.main-footer { /* Added class */
+    background-color: #343a40; /* Dark Footer */
+    color: var(--light-gray);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem; /* Space above footer */
+    font-size: 0.9rem;
+}
+footer.main-footer p { margin: 0; }
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUpFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    nav.main-nav {
+        justify-content: center; /* Center nav items on smaller screens */
+    }
+    .site-title {
+        width: 100%; /* Make title take full width */
+        text-align: center; /* Center title */
+        margin-bottom: 0.5rem; /* Space below title */
+    }
+}
+
+@media (max-width: 768px) {
+    body { font-size: 15px; } /* Slightly smaller base font */
+    .content-box { padding: 1rem; }
+    .content-box h1 { font-size: 1.8rem; }
+    .content-box h2 { font-size: 1.5rem; }
+    .content-box h3 { font-size: 1.1rem; }
+    .btn { font-size: 0.9rem; padding: 0.4rem 0.8rem; }
+    .btn-lg { font-size: 1rem; padding: 0.6rem 1.2rem; }
+    .nav-links a, .nav-links .dropdown-btn { font-size: 0.9rem; padding: 0.4rem 0.8rem; }
+    .dropdown-content { min-width: 180px; }
+    .dropdown-content a { padding: 0.4rem 1rem; font-size: 0.85rem; }
+    main { padding: 1.5rem 0.5rem; }
+}
+
+@media (max-width: 576px) {
+     /* Further adjustments for very small screens if needed */
+     .card-container { grid-template-columns: 1fr; }
+}
