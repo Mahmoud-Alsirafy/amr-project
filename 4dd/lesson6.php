@@ -11,7 +11,7 @@ if (!isset($_SESSION['login'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الدرس الأول - تصميم موحد</title>
+    <title>الدرس الأول - حالات المادة</title>
     <link rel="stylesheet" href="../bootstrap.min.css">
     <link rel="stylesheet" href="styles.css?v=2">
     <style>
@@ -47,7 +47,7 @@ if (!isset($_SESSION['login'])) {
 <body>
     <header class="main-header">
         <nav class="main-nav">
-            <a href="main.php" class="site-title">موقع تعليم الهندسة</a>
+            <a href="main.php" class="site-title">موقع تعليم العلوم</a>
             <div class="nav-links">
                 <a href="main.php">الرئيسية</a>
                 <div class="dropdown">
@@ -82,55 +82,44 @@ if (!isset($_SESSION['login'])) {
             <h2>الاختبار القبلي</h2>
             <form id="preTestForm">
                 <div class="question">
-                    <p>1. ما هو تعريف الهندسة؟</p>
+                    <p>1. أي مما يلي يُعتبر من مكونات الحاسب؟</p>
                     <div class="options">
-                        <label for="l1q1a"><input type="radio" id="l1q1a" name="q1" value="a" required> <span>علم الرياضيات فقط</span></label>
-                        <label for="l1q1b"><input type="radio" id="l1q1b" name="q1" value="b"> <span>علم تطبيق الرياضيات والعلوم لحل المشكلات العملية</span></label>
-                        <label for="l1q1c"><input type="radio" id="l1q1c" name="q1" value="c"> <span>فن البناء فقط</span></label>
+                        <label><input type="radio" name="q1" value="a" required> الماوس</label>
+                        <label><input type="radio" name="q1" value="b"> الطابعة</label>
+                        <label><input type="radio" name="q1" value="c"> المقعد</label>
                     </div>
                 </div>
                 <button type="button" class="btn" onclick="showLesson()">بدء الدرس</button>
             </form>
         </div>
 
-        <div class="content-box lesson-section" id="lessonContent">
-            <h2 class="text-dark">الدرس الأول: مقدمة في الهندسة</h2>
+        <div class="content-box lesson-section" id="lessonContent" style="display:none;">
+            <h2>الدرس: مكونات الحاسب</h2>
             <div class="lesson-content">
-                <p>الهندسة هي علم يجمع بين النظرية والتطبيق، حيث يتم استخدام المبادئ العلمية والرياضية لحل المشكلات العملية وتطوير الحلول التقنية.</p>
-                <p>تشمل المجالات الرئيسية للهندسة:</p>
-                <ul class="">
-                    <li>الهندسة المدنية</li>
-                    <li>الهندسة الميكانيكية</li>
-                    <li>الهندسة الكهربائية</li>
-                    <li>الهندسة الكيميائية</li>
-                    <li>وغيرها الكثير...</li>
-                </ul>
+                <p>يتكون الحاسب من مكونات مادية (مثل الشاشة، لوحة المفاتيح، المعالج) ومكونات برمجية (مثل نظام التشغيل والبرامج).</p>
             </div>
-            <button type="button" class="btn" onclick="showPostTest()">انتقل إلى الاختبار البعدي</button>
+            <button type="button" class="btn" onclick="showPostTest()">اختبار بعدي</button>
         </div>
 
-        <div class="content-box lesson-section" id="postTest">
+        <div class="content-box lesson-section" id="postTest" style="display:none;">
             <h2>الاختبار البعدي</h2>
             <form id="postTestForm">
                 <div class="question">
-                    <p>1. ما هي المجالات الرئيسية للهندسة؟</p>
+                    <p>1. ما نوع نظام التشغيل؟</p>
                     <div class="options">
-                        <label for="l1pq1a"><input type="radio" id="l1pq1a" name="post_q1" value="a" required> <span>الهندسة المدنية فقط</span></label>
-                        <label for="l1pq1b"><input type="radio" id="l1pq1b" name="post_q1" value="b"> <span>الهندسة المدنية والميكانيكية والكهربائية والكيميائية</span></label>
-                        <label for="l1pq1c"><input type="radio" id="l1pq1c" name="post_q1" value="c"> <span>الهندسة المعمارية فقط</span></label>
+                        <label><input type="radio" name="post_q1" value="a" required> مكون مادي</label>
+                        <label><input type="radio" name="post_q1" value="b"> مكون برمجي</label>
+                        <label><input type="radio" name="post_q1" value="c"> طابعة</label>
                     </div>
                 </div>
-                <button type="button" class="btn btn-success" onclick="finishLesson()">إنهاء الدرس</button>
+                <button type="button" class="btn" onclick="finishLesson()">إنهاء الدرس</button>
             </form>
         </div>
         <div class="video-container text-center">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/w7tcHkbdUeI?si=L_zwhAyS9F6qSrpz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/U7Okz2kQH0E?si=51Lee0dZIrVrdFOj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </div>
     </main>
-
     <footer class="main-footer">
-        <p>جميع الحقوق محفوظة &copy; <span id="currentYear">2025</span> موقع تعليم الهندسة</p>
+        <p>جميع الحقوق محفوظة &copy; <span id="currentYear">2025</span> موقع تعليم العلوم</p>
     </footer>
 
     <script>
@@ -144,14 +133,6 @@ if (!isset($_SESSION['login'])) {
             const preTestForm = document.getElementById('preTestForm');
             if (!preTestForm.checkValidity()) {
                 alert('الرجاء الإجابة على سؤال الاختبار القبلي أولاً.');
-                const invalidInput = preTestForm.querySelector(':invalid');
-                if (invalidInput) {
-                    let qBlock = invalidInput.closest('.question');
-                    if (qBlock) qBlock.style.outline = '1px solid var(--error-color)';
-                    setTimeout(() => {
-                        if (qBlock) qBlock.style.outline = 'none';
-                    }, 3000);
-                }
                 return;
             }
             document.getElementById('preTest').style.display = 'none';
@@ -173,18 +154,10 @@ if (!isset($_SESSION['login'])) {
             const postTestForm = document.getElementById('postTestForm');
             if (!postTestForm.checkValidity()) {
                 alert('الرجاء الإجابة على سؤال الاختبار البعدي أولاً.');
-                const invalidInput = postTestForm.querySelector(':invalid');
-                if (invalidInput) {
-                    let qBlock = invalidInput.closest('.question');
-                    if (qBlock) qBlock.style.outline = '1px solid var(--error-color)';
-                    setTimeout(() => {
-                        if (qBlock) qBlock.style.outline = 'none';
-                    }, 3000);
-                }
                 return;
             }
             alert('أحسنت! لقد أكملت الدرس الأول بنجاح.');
-            window.location.href = 'lesson2.php';
+            window.location.href = 'exam.php';
         }
     </script>
 </body>

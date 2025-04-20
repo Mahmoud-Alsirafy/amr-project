@@ -118,10 +118,14 @@
                     header("Location: welcom.php");
                     exit();
                 } else {
-                    echo '<p class="error">كلمة المرور غير صحيحة</p>';
+                    // echo '<p class="error">كلمة المرور غير صحيحة</p>';
+            echo ' <div class="alert alert-danger" role="alert">كلمة المرور غير صحيحة</div>';
+
                 }
             } else {
-                echo '<p class="error">اسم المستخدم غير موجود</p>';
+            echo ' <div class="alert alert-danger" role="alert">اسم المستخدم غير موجود</div>';
+
+                // echo '<p class="error">اسم المستخدم غير موجود</p>';
             }
             
             $stmt->close();

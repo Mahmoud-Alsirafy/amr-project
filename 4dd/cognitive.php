@@ -11,7 +11,13 @@ if(!isset($_SESSION['login'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الأهداف المعرفية - تصميم موحد</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
        <link rel="stylesheet" href="styles.css?v=2">
+       <style>
+        .content-box p , h3{
+            color: #000 !important;
+        }
+       </style>
 </head>
 <body>
     <header class="main-header">
@@ -31,7 +37,12 @@ if(!isset($_SESSION['login'])) {
                     <button class="dropdown-btn">قائمة المحتوى</button>
                     <div class="dropdown-content">
                         <a href="lesson1.php">الدرس الأول</a>
-                        <a href="lesson2.php">الدرس الثاني</a>
+<a href="lesson2.php">الدرس الثاني</a>
+<a href="lesson3.php">الدرس الثالث</a>
+<a href="lesson4.php">الدرس الرابع</a>
+<a href="lesson5.php">الدرس الخامس</a>
+<a href="lesson6.php">الدرس السادس</a>
+
                     </div>
                 </div>
                  <a href="exam.php">اختبار شامل</a>
@@ -42,9 +53,9 @@ if(!isset($_SESSION['login'])) {
 
     <main>
         <div class="content-box page-header" >
-             <h2>الأهداف المعرفية</h2>
-             <p style="color: var(--light-text);">المعرفة والمفاهيم التي نسعى لاكسابها للطلاب</p>
-             <hr style="border: 0; border-top: 1px solid var(--border-color); margin-top: 1rem;">
+             <h2 class="text-dark">الأهداف المعرفية</h2>
+             <p class="text-dark">المعرفة والمفاهيم التي نسعى لاكسابها للطلاب</p>
+             <hr style="border: 0; border-top: 1px solid #000; margin-top: 1rem;">
         </div>
 
         <div class="objective-item content-box">

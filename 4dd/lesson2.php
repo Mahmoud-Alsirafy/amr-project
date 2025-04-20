@@ -11,6 +11,8 @@ if(!isset($_SESSION['login'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الدرس الثاني - تصميم موحد</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+
          <link rel="stylesheet" href="styles.css?v=2">
          <style>
         .question p{
@@ -26,6 +28,8 @@ if(!isset($_SESSION['login'])) {
         }
         .lesson-content ul li{
             margin-top: 20px;
+            cursor: pointer;
+
         }
         .lesson-content ul li:hover{
             transition: 0.5s;
@@ -51,8 +55,13 @@ if(!isset($_SESSION['login'])) {
                <div class="dropdown">
                    <button class="dropdown-btn">قائمة المحتوى</button>
                    <div class="dropdown-content">
-                       <a href="lesson1.php">الدرس الأول</a>
-                       <a href="lesson2.php">الدرس الثاني</a>
+                   <a href="lesson1.php">الدرس الأول</a>
+<a href="lesson2.php">الدرس الثاني</a>
+<a href="lesson3.php">الدرس الثالث</a>
+<a href="lesson4.php">الدرس الرابع</a>
+<a href="lesson5.php">الدرس الخامس</a>
+<a href="lesson6.php">الدرس السادس</a>
+
                    </div>
                </div>
                <a href="exam.php">اختبار شامل</a>
@@ -113,6 +122,8 @@ if(!isset($_SESSION['login'])) {
                  <button type="button" class="btn btn-success" onclick="finishLesson()">إنهاء الدرس</button>
             </form>
         </div>
+        <div class="video-container text-center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HJl3sAuk2jk?si=BEvSE417XpepODn0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </div>
     </main>
 
     <footer class="main-footer">
@@ -162,7 +173,9 @@ if(!isset($_SESSION['login'])) {
                  return;
              }
             alert('أحسنت! لقد أكملت الدرس الثاني بنجاح.');
-            window.location.href = 'exam.php'; // Go to exam page after last lesson
+            window.location.href = 'lesson3.php';
+
+             // Go to exam page after last lesson
         }
     </script>
 </body>

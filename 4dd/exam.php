@@ -1,21 +1,28 @@
 <?php
 session_start();
-if(!isset($_SESSION['login'])) {
+if (!isset($_SESSION['login'])) {
     header("Location:../login.php");
     exit();
 }
 ?>
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الاختبار الشامل - تصميم موحد</title>
-        <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css?v=2">
+    <style>
+        .question h3{
+             color: #000;
+        }
+    </style>
 </head>
+
 <body>
     <header class="main-header">
-         <nav class="main-nav">
+        <nav class="main-nav">
             <a href="main.php" class="site-title">موقع تعليم الهندسة</a>
             <div class="nav-links">
                 <a href="main.php">الرئيسية</a>
@@ -32,6 +39,11 @@ if(!isset($_SESSION['login'])) {
                     <div class="dropdown-content">
                         <a href="lesson1.php">الدرس الأول</a>
                         <a href="lesson2.php">الدرس الثاني</a>
+                        <a href="lesson3.php">الدرس الثالث</a>
+                        <a href="lesson4.php">الدرس الرابع</a>
+                        <a href="lesson5.php">الدرس الخامس</a>
+                        <a href="lesson6.php">الدرس السادس</a>
+
                     </div>
                 </div>
                 <a href="exam.php">اختبار شامل</a>
@@ -48,7 +60,7 @@ if(!isset($_SESSION['login'])) {
                 <div class="content-box question">
                     <h3>1. ما هو تعريف الهندسة؟</h3>
                     <div class="options">
-                         <label for="q1a"><input type="radio" id="q1a" name="q1" value="a"> <span>علم الرياضيات فقط</span></label>
+                        <label for="q1a"><input type="radio" id="q1a" name="q1" value="a"> <span>علم الرياضيات فقط</span></label>
                         <label for="q1b"><input type="radio" id="q1b" name="q1" value="b" required> <span>علم تطبيق الرياضيات والعلوم لحل المشكلات العملية</span></label>
                         <label for="q1c"><input type="radio" id="q1c" name="q1" value="c"> <span>فن البناء فقط</span></label>
                     </div>
@@ -80,103 +92,159 @@ if(!isset($_SESSION['login'])) {
                         <label for="q4c"><input type="radio" id="q4c" name="q4" value="c"> <span>ليست مهمة للمهندس</span></label>
                     </div>
                 </div>
-                <div id="sbu"> <button type="submit" class="btn btn-lg">إنهاء الاختبار</button>
+                <div class="content-box question">
+                <h3>5. ما هي وحدات قياس الطول في النظام المتري؟</h3>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a" required> <span>البوصة والقدم</span></label>
+                    <label><input type="radio" name="q5" value="b"> <span>الميليمتر والسنتيمتر والمتر</span></label>
+                    <label><input type="radio" name="q5" value="c"> <span>الجالون والباوند</span></label>
                 </div>
-            </form>
+        </div>
 
-            <div id="result"></div>
+        <div class="content-box question">
+            <h3>6. أي من التالي يُعد أداة لقياس الزوايا؟</h3>
+            <div class="options">
+                <label><input type="radio" name="q6" value="a" required> <span>الفرجار</span></label>
+                <label><input type="radio" name="q6" value="b"> <span>المنقلة</span></label>
+                <label><input type="radio" name="q6" value="c"> <span>المسطرة</span></label>
+            </div>
+        </div>
+
+        <div class="content-box question">
+            <h3>7. ما هو الشكل الذي يحتوي على ثلاثة أضلاع؟</h3>
+            <div class="options">
+                <label><input type="radio" name="q7" value="a" required> <span>مربع</span></label>
+                <label><input type="radio" name="q7" value="b"> <span>مثلث</span></label>
+                <label><input type="radio" name="q7" value="c"> <span>دائرة</span></label>
+            </div>
+        </div>
+
+        <div class="content-box question">
+            <h3>8. ما هي أهم خصائص المواد الهندسية؟</h3>
+            <div class="options">
+                <label><input type="radio" name="q8" value="a" required> <span>اللون والطعم</span></label>
+                <label><input type="radio" name="q8" value="b"> <span>المتانة، والصلابة، والمرونة</span></label>
+                <label><input type="radio" name="q8" value="c"> <span>الرائحة والشكل</span></label>
+            </div>
+        </div>
+
+        <div class="content-box question">
+            <h3>9. ما أهمية الدقة في القياس للمهندس؟</h3>
+            <div class="options">
+                <label><input type="radio" name="q9" value="a" required> <span>لتحقيق نتائج دقيقة وتجنب الأخطاء</span></label>
+                <label><input type="radio" name="q9" value="b"> <span>لزيادة الجهد فقط</span></label>
+                <label><input type="radio" name="q9" value="c"> <span>لا أهمية لها</span></label>
+            </div>
+        </div>
+
+        <div class="content-box question">
+            <h3>10. ما هو تعريف الكتلة؟</h3>
+            <div class="options">
+                <label><input type="radio" name="q10" value="a" required> <span>الحيز الذي يشغله الجسم</span></label>
+                <label><input type="radio" name="q10" value="b"> <span>كمية المادة في الجسم</span></label>
+                <label><input type="radio" name="q10" value="c"> <span>طول الجسم فقط</span></label>
+            </div>
+        </div>
+        <div id="sbu"> <button type="submit" class="btn btn-lg">إنهاء الاختبار</button>
+        </div>
+        </form>
+
+        <div id="result"></div>
         </div>
     </main>
 
-     <footer class="main-footer">
+    <footer class="main-footer">
         <p>جميع الحقوق محفوظة &copy; <span id="currentYear">2025</span> موقع تعليم الهندسة</p>
     </footer>
 
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        function logout() {
-            window.location.href = 'index.php';
-        }
+function logout() {
+    window.location.href = 'index.php';
+}
 
-        function checkAnswers(event) {
-            event.preventDefault();
-            const correctAnswers = {
-                q1: 'b',
-                q2: 'b',
-                q3: 'c',
-                q4: 'a'
-            };
+function checkAnswers(event) {
+    event.preventDefault();
+    const correctAnswers = {
+        q1: 'b',
+        q2: 'b',
+        q3: 'c',
+        q4: 'a',
+        q5: 'c',
+        q6: 'a',
+        q7: 'c',
+        q8: 'b',
+        q9: 'a',
+        q10:'c'
+    };
 
-            let score = 0;
-            let total = Object.keys(correctAnswers).length;
-            let allAnswered = true;
-            const form = document.getElementById('examForm');
+    let score = 0;
+    let total = Object.keys(correctAnswers).length;
+    let allAnswered = true;
+    const form = document.getElementById('examForm');
 
-            // Check if all required questions are answered
-            for (let i = 0; i < form.elements.length; i++) {
-                const element = form.elements[i];
-                if (element.type === 'radio' && element.required) {
-                    const groupName = element.name;
-                    if (!form.querySelector(`input[name="${groupName}"]:checked`)) {
-                        allAnswered = false;
-                        // Highlight the first unanswered question block
-                        let questionBlock = element.closest('.question');
-                        if (questionBlock) {
-                             questionBlock.style.borderColor = 'var(--error-color)';
-                             setTimeout(() => { questionBlock.style.borderColor = ''; }, 3000);
-                             questionBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
-                        break; // Stop checking after finding the first unanswered
-                    }
+    for (let i = 0; i < form.elements.length; i++) {
+        const element = form.elements[i];
+        if (element.type === 'radio' && element.required) {
+            const groupName = element.name;
+            if (!form.querySelector(`input[name="${groupName}"]:checked`)) {
+                allAnswered = false;
+                let questionBlock = element.closest('.question');
+                if (questionBlock) {
+                    questionBlock.style.borderColor = 'var(--error-color)';
+                    setTimeout(() => { questionBlock.style.borderColor = ''; }, 3000);
+                    questionBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
+                break;
             }
-
-             if (!allAnswered) {
-                 alert("الرجاء الإجابة على جميع الأسئلة قبل الإنهاء.");
-                 return false; // Stop submission
-             }
-
-            // Calculate score
-            for (let question in correctAnswers) {
-                const selected = form.querySelector(`input[name="${question}"]:checked`);
-                // No need to check if selected here because we already validated above
-                if (selected.value === correctAnswers[question]) {
-                    score++;
-                }
-            }
-
-            const percentage = (score / total) * 100;
-            const resultDiv = document.getElementById('result');
-            resultDiv.style.display = 'block';
-            resultDiv.scrollIntoView({ behavior: 'smooth' }); // Scroll to show result
-
-            if (percentage >= 75) {
-                resultDiv.className = 'success'; // Use class for styling
-                resultDiv.innerHTML = `
-                    <h2>تهانينا! &#x1F389;</h2>
-                    <p>لقد اجتزت الاختبار بنجاح.</p>
-                    <p><strong>النتيجة: ${score} من ${total} (${percentage.toFixed(0)}%)</strong></p>
-                    <button onclick="window.location.href='main.php'" class="btn btn-success">العودة للصفحة الرئيسية</button>
-                `;
-            } else {
-                resultDiv.className = 'failure'; // Use class for styling
-                resultDiv.innerHTML = `
-                    <h2>للأسف! &#x1F61E;</h2>
-                    <p>تحتاج إلى مراجعة الدروس مرة أخرى.</p>
-                    <p><strong>النتيجة: ${score} من ${total} (${percentage.toFixed(0)}%)</strong></p>
-                    <button onclick="window.location.href='lesson1.php'" class="btn btn-secondary">مراجعة الدروس</button>
-                `;
-            }
-
-            // Disable form inputs after submission
-            const formElements = form.elements;
-            for (let i = 0; i < formElements.length; i++) {
-                formElements[i].disabled = true;
-            }
-
-            return false; // Prevent default form submission behavior
         }
+    }
+
+    if (!allAnswered) {
+        alert("الرجاء الإجابة على جميع الأسئلة قبل الإنهاء.");
+        return false;
+    }
+
+    for (let question in correctAnswers) {
+        const selected = form.querySelector(`input[name="${question}"]:checked`);
+        if (selected.value === correctAnswers[question]) {
+            score++;
+        }
+    }
+
+    const percentage = (score / total) * 100;
+    const resultDiv = document.getElementById('result');
+    resultDiv.style.display = 'block';
+    resultDiv.scrollIntoView({ behavior: 'smooth' });
+
+    if (percentage >= 75) {
+        resultDiv.className = 'success';
+        resultDiv.innerHTML = `
+            <h2>تهانينا! 🎉</h2>
+            <p>لقد اجتزت الاختبار بنجاح.</p>
+            <p><strong>النتيجة: ${score} من ${total} (${percentage.toFixed(0)}%)</strong></p>
+            <button onclick="window.location.href='main.php'" class="btn btn-success">العودة للصفحة الرئيسية</button>
+        `;
+    } else {
+        resultDiv.className = 'failure';
+        resultDiv.innerHTML = `
+            <h2>للأسف! 😞</h2>
+            <p>تحتاج إلى مراجعة الدروس مرة أخرى.</p>
+            <p><strong>النتيجة: ${score} من ${total} (${percentage.toFixed(0)}%)</strong></p>
+            <button onclick="window.location.href='lesson1.php'" class="btn btn-secondary">مراجعة الدروس</button>
+        `;
+    }
+
+    const formElements = form.elements;
+    for (let i = 0; i < formElements.length; i++) {
+        formElements[i].disabled = true;
+    }
+
+    return false;
+}
+
     </script>
 </body>
+
 </html>

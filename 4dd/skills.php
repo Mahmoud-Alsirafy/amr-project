@@ -12,6 +12,14 @@ if(!isset($_SESSION['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الأهداف المهارية - تصميم موحد</title>
         <link rel="stylesheet" href="styles.css?v=2">
+        <style>
+        .objective >*{
+            color: #000 !important;
+        }
+        .content-box hr{
+            color: #007bff !important;
+        }
+      </style>
 </head>
 <body>
      <header class="main-header">
@@ -44,27 +52,27 @@ if(!isset($_SESSION['login'])) {
     <main>
          <div class="content-box">
             <h1>الأهداف المهارية</h1>
-
+            <hr>
              <div class="objective">
                 <h3>مهارات حل المشكلات</h3>
                 <p>تطبيق خطوات منهجية لحل المشكلات الهندسية المعقدة.</p>
             </div>
-
+            <hr>
             <div class="objective">
                 <h3>مهارات التصميم</h3>
                 <p>القدرة على تصميم أنظمة ومكونات هندسية تلبي احتياجات محددة.</p>
             </div>
-
+            <hr>
             <div class="objective">
                 <h3>مهارات استخدام الأدوات</h3>
                 <p>استخدام الأدوات والبرامج الهندسية بفعالية في التحليل والتصميم.</p>
             </div>
-
+            <hr>
             <div class="objective">
                 <h3>مهارات التواصل الفني</h3>
                 <p>إعداد التقارير الفنية والعروض التقديمية بوضوح ودقة.</p>
             </div>
-
+            <hr>
             <div class="objective">
                 <h3>مهارات إدارة المشاريع</h3>
                 <p>فهم أساسيات إدارة المشاريع الهندسية وتطبيقها.</p>

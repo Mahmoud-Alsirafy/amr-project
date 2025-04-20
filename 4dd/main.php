@@ -12,21 +12,24 @@ if (!isset($_SESSION['login'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الرئيسية - تصميم موحد</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+
     <link rel="stylesheet" href="styles.css?v=2">
     <style>
-       
-        .card{
+        .card {
             text-align: center !important;
             margin-top: 15px;
             font-size: large;
         }
-        .card a{
+
+        .card a {
             text-decoration: none;
             color: #fff;
             display: inline-block;
             margin-right: 10px;
         }
-        .card a:hover{
+
+        .card a:hover {
             transition: 0.5s;
             transform: scale(1.2);
         }
@@ -52,6 +55,11 @@ if (!isset($_SESSION['login'])) {
                     <div class="dropdown-content">
                         <a href="lesson1.php">الدرس الأول</a>
                         <a href="lesson2.php">الدرس الثاني</a>
+                        <a href="lesson3.php">الدرس الثالث</a>
+                        <a href="lesson4.php">الدرس الرابع</a>
+                        <a href="lesson5.php">الدرس الخامس</a>
+                        <a href="lesson6.php">الدرس السادس</a>
+
                     </div>
                 </div>
                 <a href="exam.php">اختبار شامل</a>
@@ -84,6 +92,8 @@ if (!isset($_SESSION['login'])) {
                 <a href="exam.php" class="btn-card">بدء الاختبار</a>
             </div>
         </div>
+        
+
     </main>
 
     <footer class="main-footer">
