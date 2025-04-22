@@ -65,10 +65,6 @@ if (!isset($_SESSION['login'])) {
                         <a href="lesson1.php">الدرس الأول</a>
                         <a href="lesson2.php">الدرس الثاني</a>
                         <a href="lesson3.php">الدرس الثالث</a>
-                        <a href="lesson4.php">الدرس الرابع</a>
-                        <a href="lesson5.php">الدرس الخامس</a>
-                        <a href="lesson6.php">الدرس السادس</a>
-
                     </div>
                 </div>
                 <a href="exam.php">اختبار شامل</a>
@@ -77,55 +73,80 @@ if (!isset($_SESSION['login'])) {
             </div>
         </nav>
     </header>
-
     <main>
-        <div class="content-box lesson-section" id="preTest">
-            <h2>الاختبار القبلي</h2>
-            <form id="preTestForm">
-                <div class="question">
-                    <p>1. كم عدد حالات المادة المعروفة؟</p>
-                    <div class="options">
-                        <label><input type="radio" name="q1" value="a" required> <span>حالتان</span></label>
-                        <label><input type="radio" name="q1" value="b"> <span>ثلاث حالات</span></label>
-                        <label><input type="radio" name="q1" value="c"> <span>أربع حالات</span></label>
-                    </div>
+    <!-- الاختبار القبلي -->
+    <div class="content-box lesson-section" id="preTest">
+        <h2>الاختبار القبلي</h2>
+        <form id="preTestForm">
+            <div class="question">
+                <p>1. ما هو الفرق بين الكواكب الداخلية والخارجية؟</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a" required> <span>الكواكب الداخلية أصغر حجمًا من الكواكب الخارجية</span></label>
+                    <label><input type="radio" name="q1" value="b"> <span>الكواكب الخارجية تحتوي على المزيد من الغازات</span></label>
+                    <label><input type="radio" name="q1" value="c"> <span>الكواكب الخارجية تدور أسرع من الكواكب الداخلية</span></label>
                 </div>
-                <button type="button" class="btn" onclick="showLesson()">بدء الدرس</button>
-            </form>
-        </div>
-
-        <div class="content-box lesson-section" id="lessonContent">
-            <h2 class="text-dark">الدرس الأول: حالات المادة</h2>
-            <div class="lesson-content">
-                <p>المادة هي كل ما له كتلة ويشغل حيزًا. لها أربع حالات رئيسية:</p>
-                <ul>
-                    <li>الصلبة</li>
-                    <li>السائلة</li>
-                    <li>الغازية</li>
-                    <li>البلازما</li>
-                </ul>
-                <p>لكل حالة خصائص مميزة من حيث الشكل والحجم وقابلية الانضغاط.</p>
             </div>
-            <button type="button" class="btn" onclick="showPostTest()">انتقل إلى الاختبار البعدي</button>
-        </div>
+            <button type="button" class="btn" onclick="showLesson()">بدء الدرس</button>
+        </form>
+    </div>
 
-        <div class="content-box lesson-section" id="postTest">
-            <h2>الاختبار البعدي</h2>
-            <form id="postTestForm">
-                <div class="question">
-                    <p>1. ما هي حالات المادة الأربع؟</p>
-                    <div class="options">
-                        <label><input type="radio" name="post_q1" value="a" required> <span>الصلبة والسائلة فقط</span></label>
-                        <label><input type="radio" name="post_q1" value="b"> <span>الصلبة والسائلة والغازية والبلازما</span></label>
-                        <label><input type="radio" name="post_q1" value="c"> <span>الصلبة والسائلة والمعجون</span></label>
-                    </div>
+    <!-- درس الكواكب الخارجية -->
+    <div class="content-box lesson-section" id="lessonContent" style="display:none;">
+    <h2 class="text-dark">الدرس: الكواكب الخارجية</h2>
+    <div class="lesson-content">
+        <p>الكواكب الخارجية هي الكواكب التي تقع بعيدًا عن الشمس. تتميز هذه الكواكب بأنها أكبر حجمًا من الكواكب الداخلية وتتكون في الغالب من الغازات. الكواكب الخارجية هي:</p>
+        <ul>
+            <li>المشتري</li>
+            <li>زحل</li>
+            <li>أورانوس</li>
+            <li>نبتون</li>
+        </ul>
+        <p>هذه الكواكب تحتوي على غلاف غازي واسع، يتكون من غازات مثل الهيدروجين والهيليوم. كما تحتوي الكواكب الخارجية على العديد من الأقمار. على سبيل المثال:</p>
+        
+        <h3>المشتري</h3>
+        <p>المشتري هو أكبر كوكب في النظام الشمسي، ويعتبر عملاقًا غازيًا. يحتوي على غلاف غازي سميك ويشتهر بالعاصفة العظيمة الحمراء، وهي عاصفة ضخمة تدور في الغلاف الجوي للكوكب منذ مئات السنين. يحتوي المشتري على 79 قمرًا، وأكبر قمرين هما غانيميد وكاليستو.</p>
+        
+        <h3>زحل</h3>
+        <p>زحل هو الكوكب الذي يتميز بحلقاته الواسعة التي تتكون من الجليد والصخور. زحل هو ثاني أكبر كوكب في النظام الشمسي، ويحتوي على 82 قمرًا معروفًا، أكبرها هو تيتان. الكوكب يتكون بشكل رئيسي من الهيدروجين والهيليوم، ويعتبر أحد أبرز الكواكب في السماء بسبب حلقاته المدهشة.</p>
+        
+        <h3>أورانوس</h3>
+        <p>أورانوس هو كوكب عملاق جليدي يختلف عن باقي الكواكب بسبب ميوله الشديد، حيث يميل محوره بنحو 98 درجة على مداره. يتميز أورانوس بلونه الأزرق بسبب غاز الميثان في غلافه الجوي. أورانوس يحتوي على 27 قمرًا معروفًا. بالإضافة إلى ذلك، أورانوس لديه حلقات ضبابية دقيقة قد تكون أقل وضوحًا من حلقات زحل.</p>
+        
+        <h3>نبتون</h3>
+        <p>نبتون هو الكوكب الثامن والأبعد عن الشمس في النظام الشمسي. يتميز نبتون بلونه الأزرق العميق بسبب غاز الميثان في غلافه الجوي. الكوكب يحتوي على رياح شديدة السرعة، والتي تعتبر الأسرع في النظام الشمسي. نبتون يحتوي على 14 قمرًا، وأكبر قمر له هو تريتون الذي يتمتع بحركة عكسية حول الكوكب.</p>
+        
+        <p>على الرغم من أن الكواكب الخارجية تحتوي على العديد من المميزات المشتركة مثل الغلاف الغازي والأقمار، إلا أنها تختلف في خصائصها مثل الحجم والظروف البيئية.</p>
+        
+        <p>تتميز الكواكب الخارجية بأنها أكبر بكثير من الكواكب الداخلية، ولها حلقات مميزة كما في حالة زحل، بالإضافة إلى أن معظمها لا يحتوي على سطح صلب يمكن الهبوط عليه، بل هو عبارة عن غازات وسوائل تحت الضغط العالي.</p>
+    </div>
+    <button type="button" class="btn" onclick="showPostTest()">انتقل إلى الاختبار البعدي</button>
+</div>
+
+
+    <!-- الاختبار البعدي -->
+    <div class="content-box lesson-section" id="postTest" style="display:none;">
+        <h2>الاختبار البعدي</h2>
+        <form id="postTestForm">
+            <div class="question">
+                <p>1. ما هي الكواكب الخارجية؟</p>
+                <div class="options">
+                    <label><input type="radio" name="post_q1" value="a" required> <span>الكواكب المشتري وزحل وأورانوس ونبتون</span></label>
+                    <label><input type="radio" name="post_q1" value="b"> <span>الكواكب الأرضية مثل الأرض والمريخ</span></label>
+                    <label><input type="radio" name="post_q1" value="c"> <span>الكواكب الصغيرة مثل بلوتو وأريس</span></label>
                 </div>
-                <button type="button" class="btn btn-success" onclick="finishLesson()">إنهاء الدرس</button>
-            </form>
+            </div>
+            <button type="button" class="btn btn-success" onclick="finishLesson()">إنهاء الدرس</button>
+        </form>
+    </div>
+
+    <!-- فيديو تعليمي -->
+    <div class=" ">
+            <img src="out.jpg" class="img-fluid text-center" alt="">
         </div>
-        <div class="video-container text-center">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/JTTJ_Mw9p_U?si=54Tm3mYUPhTKf2J8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </div>
-    </main>
+</main>
+
+
+
 
     <footer class="main-footer">
         <p>جميع الحقوق محفوظة &copy; <span id="currentYear">2025</span> موقع تعليم العلوم</p>

@@ -11,7 +11,7 @@ if (!isset($_SESSION['login'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الاختبار الشامل - تصميم موحد</title>
+    <title>الاختبار الشامل - الكواكب الداخلية والخارجية</title>
     <link rel="stylesheet" href="styles.css?v=2">
     <style>
         .question h3{
@@ -23,7 +23,7 @@ if (!isset($_SESSION['login'])) {
 <body>
     <header class="main-header">
         <nav class="main-nav">
-            <a href="main.php" class="site-title">موقع تعليم الهندسة</a>
+            <a href="main.php" class="site-title">موقع تعليم الفضاء</a>
             <div class="nav-links">
                 <a href="main.php">الرئيسية</a>
                 <div class="dropdown">
@@ -40,10 +40,6 @@ if (!isset($_SESSION['login'])) {
                         <a href="lesson1.php">الدرس الأول</a>
                         <a href="lesson2.php">الدرس الثاني</a>
                         <a href="lesson3.php">الدرس الثالث</a>
-                        <a href="lesson4.php">الدرس الرابع</a>
-                        <a href="lesson5.php">الدرس الخامس</a>
-                        <a href="lesson6.php">الدرس السادس</a>
-
                     </div>
                 </div>
                 <a href="exam.php">اختبار شامل</a>
@@ -55,107 +51,110 @@ if (!isset($_SESSION['login'])) {
 
     <main>
         <div class="content-box">
-            <h1>الاختبار الشامل</h1>
+            <h1>الاختبار الشامل - الكواكب الداخلية والخارجية</h1>
             <form id="examForm" onsubmit="return checkAnswers(event)">
                 <div class="content-box question">
-                    <h3>1. ما هو تعريف الهندسة؟</h3>
+                    <h3>1. ما هي الكواكب الداخلية في النظام الشمسي؟</h3>
                     <div class="options">
-                        <label for="q1a"><input type="radio" id="q1a" name="q1" value="a"> <span>علم الرياضيات فقط</span></label>
-                        <label for="q1b"><input type="radio" id="q1b" name="q1" value="b" required> <span>علم تطبيق الرياضيات والعلوم لحل المشكلات العملية</span></label>
-                        <label for="q1c"><input type="radio" id="q1c" name="q1" value="c"> <span>فن البناء فقط</span></label>
+                        <label for="q1a"><input type="radio" id="q1a" name="q1" value="a"> <span>عطارد، الزهرة، الأرض، المريخ</span></label>
+                        <label for="q1b"><input type="radio" id="q1b" name="q1" value="b" required> <span>المشتري، زحل، أورانوس، نبتون</span></label>
+                        <label for="q1c"><input type="radio" id="q1c" name="q1" value="c"> <span>المريخ، زحل، الأرض، نبتون</span></label>
                     </div>
                 </div>
 
                 <div class="content-box question">
-                    <h3>2. ما هي المجالات الرئيسية للهندسة؟</h3>
+                    <h3>2. أي من الكواكب التالية هو أكبر كوكب في النظام الشمسي؟</h3>
                     <div class="options">
-                        <label for="q2a"><input type="radio" id="q2a" name="q2" value="a"> <span>الهندسة المدنية فقط</span></label>
-                        <label for="q2b"><input type="radio" id="q2b" name="q2" value="b" required> <span>الهندسة المدنية والميكانيكية والكهربائية والكيميائية</span></label>
-                        <label for="q2c"><input type="radio" id="q2c" name="q2" value="c"> <span>الهندسة المعمارية فقط</span></label>
+                        <label for="q2a"><input type="radio" id="q2a" name="q2" value="a"> <span>الأرض</span></label>
+                        <label for="q2b"><input type="radio" id="q2b" name="q2" value="b" required> <span>المشتري</span></label>
+                        <label for="q2c"><input type="radio" id="q2c" name="q2" value="c"> <span>زحل</span></label>
                     </div>
                 </div>
 
                 <div class="content-box question">
-                    <h3>3. ما هي أهم مهارات المهندس؟</h3>
+                    <h3>3. ما هو الكوكب الذي يُعرف باسم "الكوكب الأحمر"؟</h3>
                     <div class="options">
-                        <label for="q3a"><input type="radio" id="q3a" name="q3" value="a"> <span>المهارات الفنية فقط</span></label>
-                        <label for="q3b"><input type="radio" id="q3b" name="q3" value="b"> <span>مهارات التواصل فقط</span></label>
-                        <label for="q3c"><input type="radio" id="q3c" name="q3" value="c" required> <span>المهارات الفنية والتحليلية ومهارات التواصل وحل المشكلات</span></label>
+                        <label for="q3a"><input type="radio" id="q3a" name="q3" value="a"> <span>الأرض</span></label>
+                        <label for="q3b"><input type="radio" id="q3b" name="q3" value="b"> <span>المريخ</span></label>
+                        <label for="q3c"><input type="radio" id="q3c" name="q3" value="c" required> <span>عطارد</span></label>
                     </div>
                 </div>
 
                 <div class="content-box question">
-                    <h3>4. لماذا تعتبر مهارات التواصل مهمة للمهندس؟</h3>
+                    <h3>4. أي كوكب يُعد أكبر الكواكب الغازية؟</h3>
                     <div class="options">
-                        <label for="q4a"><input type="radio" id="q4a" name="q4" value="a" required> <span>للتواصل مع العملاء والزملاء وشرح الحلول الفنية</span></label>
-                        <label for="q4b"><input type="radio" id="q4b" name="q4" value="b"> <span>للكتابة فقط</span></label>
-                        <label for="q4c"><input type="radio" id="q4c" name="q4" value="c"> <span>ليست مهمة للمهندس</span></label>
+                        <label for="q4a"><input type="radio" id="q4a" name="q4" value="a" required> <span>المشتري</span></label>
+                        <label for="q4b"><input type="radio" id="q4b" name="q4" value="b"> <span>نبتون</span></label>
+                        <label for="q4c"><input type="radio" id="q4c" name="q4" value="c"> <span>زحل</span></label>
                     </div>
                 </div>
+                
                 <div class="content-box question">
-                <h3>5. ما هي وحدات قياس الطول في النظام المتري؟</h3>
-                <div class="options">
-                    <label><input type="radio" name="q5" value="a" required> <span>البوصة والقدم</span></label>
-                    <label><input type="radio" name="q5" value="b"> <span>الميليمتر والسنتيمتر والمتر</span></label>
-                    <label><input type="radio" name="q5" value="c"> <span>الجالون والباوند</span></label>
+                    <h3>5. أي الكواكب التالية هو أبعد عن الشمس؟</h3>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="a" required> <span>نبتون</span></label>
+                        <label><input type="radio" name="q5" value="b"> <span>المشتري</span></label>
+                        <label><input type="radio" name="q5" value="c"> <span>زحل</span></label>
+                    </div>
                 </div>
-        </div>
 
-        <div class="content-box question">
-            <h3>6. أي من التالي يُعد أداة لقياس الزوايا؟</h3>
-            <div class="options">
-                <label><input type="radio" name="q6" value="a" required> <span>الفرجار</span></label>
-                <label><input type="radio" name="q6" value="b"> <span>المنقلة</span></label>
-                <label><input type="radio" name="q6" value="c"> <span>المسطرة</span></label>
-            </div>
-        </div>
+                <div class="content-box question">
+                    <h3>6. أي كوكب يُعتبر أقرب كوكب إلى الشمس؟</h3>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="a" required> <span>عطارد</span></label>
+                        <label><input type="radio" name="q6" value="b"> <span>الزهرة</span></label>
+                        <label><input type="radio" name="q6" value="c"> <span>المريخ</span></label>
+                    </div>
+                </div>
 
-        <div class="content-box question">
-            <h3>7. ما هو الشكل الذي يحتوي على ثلاثة أضلاع؟</h3>
-            <div class="options">
-                <label><input type="radio" name="q7" value="a" required> <span>مربع</span></label>
-                <label><input type="radio" name="q7" value="b"> <span>مثلث</span></label>
-                <label><input type="radio" name="q7" value="c"> <span>دائرة</span></label>
-            </div>
-        </div>
+                <div class="content-box question">
+                    <h3>7. أي من الكواكب التالية يُعد كوكب غازي؟</h3>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="a" required> <span>الأرض</span></label>
+                        <label><input type="radio" name="q7" value="b"> <span>عطارد</span></label>
+                        <label><input type="radio" name="q7" value="c"> <span>زحل</span></label>
+                    </div>
+                </div>
 
-        <div class="content-box question">
-            <h3>8. ما هي أهم خصائص المواد الهندسية؟</h3>
-            <div class="options">
-                <label><input type="radio" name="q8" value="a" required> <span>اللون والطعم</span></label>
-                <label><input type="radio" name="q8" value="b"> <span>المتانة، والصلابة، والمرونة</span></label>
-                <label><input type="radio" name="q8" value="c"> <span>الرائحة والشكل</span></label>
-            </div>
-        </div>
+                <div class="content-box question">
+                    <h3>8. ما هو الكوكب الذي لديه أطول يوم؟</h3>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="a" required> <span>المشتري</span></label>
+                        <label><input type="radio" name="q8" value="b"> <span>الزهرة</span></label>
+                        <label><input type="radio" name="q8" value="c"> <span>نبتون</span></label>
+                    </div>
+                </div>
 
-        <div class="content-box question">
-            <h3>9. ما أهمية الدقة في القياس للمهندس؟</h3>
-            <div class="options">
-                <label><input type="radio" name="q9" value="a" required> <span>لتحقيق نتائج دقيقة وتجنب الأخطاء</span></label>
-                <label><input type="radio" name="q9" value="b"> <span>لزيادة الجهد فقط</span></label>
-                <label><input type="radio" name="q9" value="c"> <span>لا أهمية لها</span></label>
-            </div>
-        </div>
+                <div class="content-box question">
+                    <h3>9. أي من الكواكب لديه أكبر عدد من الأقمار؟</h3>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="a" required> <span>المشتري</span></label>
+                        <label><input type="radio" name="q9" value="b"> <span>زحل</span></label>
+                        <label><input type="radio" name="q9" value="c"> <span>أورانوس</span></label>
+                    </div>
+                </div>
 
-        <div class="content-box question">
-            <h3>10. ما هو تعريف الكتلة؟</h3>
-            <div class="options">
-                <label><input type="radio" name="q10" value="a" required> <span>الحيز الذي يشغله الجسم</span></label>
-                <label><input type="radio" name="q10" value="b"> <span>كمية المادة في الجسم</span></label>
-                <label><input type="radio" name="q10" value="c"> <span>طول الجسم فقط</span></label>
-            </div>
-        </div>
-        <div id="sbu"> <button type="submit" class="btn btn-lg">إنهاء الاختبار</button>
-        </div>
-        </form>
+                <div class="content-box question">
+                    <h3>10. ما هو الكوكب الذي يحتوي على أكبر عاصفة في النظام الشمسي؟</h3>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="a" required> <span>المشتري</span></label>
+                        <label><input type="radio" name="q10" value="b"> <span>زحل</span></label>
+                        <label><input type="radio" name="q10" value="c"> <span>المريخ</span></label>
+                    </div>
+                </div>
+                <div id="sbu"> <button type="submit" class="btn btn-lg">إنهاء الاختبار</button>
+                </div>
+                </form>
 
-        <div id="result"></div>
+                <div id="result"></div>
         </div>
     </main>
 
     <footer class="main-footer">
-        <p>جميع الحقوق محفوظة &copy; <span id="currentYear">2025</span> موقع تعليم الهندسة</p>
+        <p>جميع الحقوق محفوظة &copy; <span id="currentYear">2025</span> موقع تعليم الفضاء</p>
     </footer>
+
+    
 
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -167,16 +166,16 @@ function logout() {
 function checkAnswers(event) {
     event.preventDefault();
     const correctAnswers = {
-        q1: 'b',
-        q2: 'b',
-        q3: 'c',
-        q4: 'a',
-        q5: 'c',
-        q6: 'a',
-        q7: 'c',
-        q8: 'b',
-        q9: 'a',
-        q10:'c'
+        q1: "a",
+        q2: "b",
+        q3: "b",
+        q4: "a",
+        q5: "a",
+        q6: "a",
+        q7: "c",
+        q8: "b",
+        q9: "a",
+        q10:"a"
     };
 
     let score = 0;
